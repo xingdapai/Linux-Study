@@ -1,2 +1,2 @@
-# Linux-command
+# Linux S
 My used Linux command
