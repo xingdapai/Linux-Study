@@ -1,2 +1,0 @@
-sudo service lightdm stop  #¹Ø±Õxwindow
-sudo apt-get --purge remove nvidia-*  #Ğ¶ÔØÓ¢Î°´ïÇı¶¯
