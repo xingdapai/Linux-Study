@@ -1,0 +1,2 @@
+sudo service lightdm stop  #关闭xwindow
+sudo apt-get --purge remove nvidia-*  #卸载英伟达驱动
