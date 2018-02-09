@@ -1,2 +1,2 @@
-# Linux S
-My used Linux command
+# Linux Study
+
