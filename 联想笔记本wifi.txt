@@ -1,0 +1,14 @@
+解决联想笔记本在安装ubuntu各个版本后无法连接wifi的问题
+
+输入一键两行即可使用wifi
+sudo modprobe -r ideapad-laptop #联想笔记本wifi
+sudo rfkill unblock all #联想笔记本wifi
+
+开机如何自动开启WiFi
+进入/etc/modprobe.d/文件夹下创建.conf文件，把影响无线wifi开关的联想插件加入黑名单。
+每种型号品牌的插件都不一样，在部分联想电脑上是ideapad_laptop，在其他电脑上有可能是其他的名字。
+#sudo gedit /etc/modprobe.d/ideapad.conf
+打开文件后在第一行输入
+blacklist ideapad_laptop
+保存并关闭后再执行#sudo modprobe -r ideapad_laptop
+重启之后，右上角的wifi就可以使用了。
