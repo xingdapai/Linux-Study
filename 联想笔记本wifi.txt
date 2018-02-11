@@ -1,6 +1,6 @@
 解决联想笔记本在安装ubuntu各个版本后无法连接wifi的问题
 
-输入一键两行即可使用wifi
+输入以下两行即可使用wifi
 sudo modprobe -r ideapad-laptop #联想笔记本wifi
 sudo rfkill unblock all #联想笔记本wifi
 
