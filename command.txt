@@ -7,3 +7,6 @@ sudo su   #获取root权限
 sudo service lightdm stop #关闭桌面
 sudo service lightdm stop  #关闭xwindow
 sudo apt-get --purge remove nvidia-*  #卸载英伟达驱动
+
+sudo modprobe -r ideapad-laptop #联想笔记本wifi
+sudo rfkill unblock all #联想笔记本wifi
