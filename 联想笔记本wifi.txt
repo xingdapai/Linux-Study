@@ -1,17 +1,33 @@
-﻿解决联想笔记本在安装ubuntu各个版本后无法连接wifi的问题
+# ﻿解决联想笔记本在安装ubuntu各个版本后无法连接wifi的问题
 
-输入一键两行即可使用wifi
-sudo modprobe -r ideapad-laptop #联想笔记本wifi
-sudo rfkill unblock all #联想笔记本wifi
+# 输入以下命令查看网卡型号
+$ lspci
 
-开机如何自动开启WiFi
-进入/etc/modprobe.d/文件夹下创建.conf文件，把影响无线wifi开关的联想插件加入黑名单。
-每种型号品牌的插件都不一样，在部分联想电脑上是ideapad_laptop，在其他电脑上有可能是其他的名字。
-#sudo gedit /etc/modprobe.d/ideapad.conf
-打开文件后在第一行输入
-blacklist ideapad_laptop
-保存并关闭后再执行#sudo modprobe -r ideapad_laptop
-重启之后，右上角的wifi就可以使用了
+# 进入 https://github.com/lwfinger/rtlwifi_new 点击右边绿色的Clone or Download按钮，选择下载zip
 
-解决无法连接校园网的问题
-在使用某些需要打开网页输入用户名密码旳wifi连接方式时，需要先安装flash插件才能正常打开网页连接wifi
+# 鼠标右键点击下载好的zip文件，选解压到当前文件夹，当前文件夹下出现rtlwifi_new-master文件夹。
+# 进入文件夹，按鼠标右键，选在终端中打开
+# 输入如下命令：
+$ make
+$ sudo make install
+$ sudo modprobe rtl8723be #对应显卡型号
+# 重启
+
+
+# 输入一键两行即可使用wifi
+$ sudo modprobe -r ideapad-laptop #联想笔记本wifi
+$ sudo rfkill unblock all #联想笔记本wifi
+
+# 开机如何自动开启WiFi
+# 进入/etc/modprobe.d/文件夹下创建.conf文件，把影响无线wifi开关的联想插件加入黑名单。
+# 每种型号品牌的插件都不一样，在部分联想电脑上是ideapad_laptop，在其他电脑上有可能是其他的名字。
+$ sudo gedit /etc/modprobe.d/ideapad.conf
+
+# 打开文件后在第一行输入
+# blacklist ideapad_laptop
+# 保存并关闭后再执行
+$ sudo modprobe -r ideapad_laptop
+# 重启之后，右上角的wifi就可以使用了
+
+# 解决无法连接校园网的问题
+# 在使用某些需要打开网页输入用户名密码旳wifi连接方式时，需要先安装flash插件才能正常打开网页连接wifi
