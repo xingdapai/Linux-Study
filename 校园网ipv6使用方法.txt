@@ -3,4 +3,4 @@
 # 只需修改hosts文件即可
 $ sudo gedit /etc/hosts
 
-# 将https://github.com/lennylxx/ipv6-hosts/blob/master/hosts下的ipv6地址复制进去即可使用ipv6上网
+# 将https://github.com/lennylxx/ipv6-hosts/blob/master/hosts下的ipv6地址复制进去即可使用ipb6上网
